@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Disease Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <form id="form">
+        Age: <input type="number" id="age"/><br/><br/>
+        Sex: <select id="sex">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select><br/><br/>
+        Chest Pain: <select id="chestPain">
+            <option value="0">GORD (Type-0)</option>
+            <option value="1">Non-specific CP (Type-1)</option>
+            <option value="2">Atypical angina (Type-2)</option>
+            <option value="3">Typcal angina (Type-3)</option>
+        </select><br/><br/>
+        Blood Pressure: <input type="number" id="bloodPressure"/><br/><br/>
+        Cholestoral in mg/dl: <input type="number" id="cholestrol"/><br/><br/>
+        Sugar in mg/dl: <input type="number" id="sugar"/><br/><br/>
+        Electrocardiographic results: <select id="ecg">
+            <option value="0">Normal</option>
+            <option value="1">Having ST-T</option>
+            <option value="2">Hypertrophy</option>
+        </select><br/><br/>
+        Maximum heart rate: <input type="number" id="heartRate"/><br/><br/>
+        Exercise Induced Angina: <select id="angina">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br/><br/>
+        Oldpeak(ST depression): <input type="number" min="0" max="10" id="oldPeak"/><br/><br/>
+        Number of major vessels colored by flourosopy: <input type="number" min="0" max="4" id="vessels"><br/><br/>
+        Stress scintigraphy: <select id="thal">
+            <option value="0">Normal</option>
+            <option value="1">Fixed defect</option>
+            <option value="2">Reversable defect</option>
+        </select>
+    </form>
+    <button class="submit" onclick="onClickedEstimateDisease()" type="button">Predict if Desease</button>
+    <div id="output"></div>
+</body>
+</html>
